@@ -12,16 +12,14 @@ API Summary is a web application for simplified technical documentation of vario
 
 ## Technologies Used
 
-- Frontend: Next.js
-- Backend: Node.js, Express.js
-- Database: PostgreSQL, Prisma
+- Full stack: Next.js
+- Database: PostgreSQL, Prisma ORM
 - Containerization: Docker
 
 ## Folder Structure
 
-- `frontend/`: Contains the frontend codebase built with Next.js.
-- `backend/`: Contains the backend codebase built with Node.js, Express.js, and Prisma.
-- `docker/`: Contains Docker configuration files for containerization.
+- `*/`: Contains the frontend codebase built with Next.js.
+- `dockerfile`: Contains Docker configuration files for containerization.
 - `.gitignore`: Specifies intentionally untracked files to ignore.
 - `README.md`: This file you're currently reading.
 
@@ -34,36 +32,11 @@ API Summary is a web application for simplified technical documentation of vario
     cd api-summary
     ```
 
-2. Set up the backend:
+2. Set up the application:
 
-   - Navigate to the `backend/` directory.
    - Install dependencies:
 
      ```bash
-        cd backend
-        npm install
-     ```
-
-   - Create a `.env` file based on the provided `.env.example` file and configure your PostgreSQL database connection.
-   - Apply Prisma migrations:
-
-     ```bash
-        npx prisma migrate dev
-     ```
-
-   - Start the backend server:
-
-     ```bash
-        npm start
-     ```
-
-3. Set up the frontend:
-
-   - Navigate to the `frontend/` directory.
-   - Install dependencies:
-
-     ```bash
-        cd ../frontend
         npm install
      ```
 
@@ -74,7 +47,7 @@ API Summary is a web application for simplified technical documentation of vario
         npm run dev
      ```
 
-4. Open your web browser and visit `http://localhost:3000` to access the API Summary application.
+3. Open your web browser and visit `http://localhost:3000` to access the API Summary application.
 
 ## Contributing
 
