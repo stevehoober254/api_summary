@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# API Summary
+
+API Summary is a web application for simplified technical documentation of various API products that lack comprehensive documentation. Users can search for a specific API and access simplified, hands-on technical documentation to facilitate their integration efforts.
+
+## Features
+
+- Search functionality to find specific APIs.
+- Detailed documentation pages for each API, including usage examples and integration guidelines.
+- User authentication and authorization for managing API documentation.
+- Admin dashboard for managing API documentation and user accounts.
+- Integration with Swagger UI or ReDoc for interactive API documentation.
+
+## Technologies Used
+
+- Frontend: Next.js
+- Backend: Node.js, Express.js
+- Database: PostgreSQL, Prisma
+- Containerization: Docker
+
+## Folder Structure
+
+- `frontend/`: Contains the frontend codebase built with Next.js.
+- `backend/`: Contains the backend codebase built with Node.js, Express.js, and Prisma.
+- `docker/`: Contains Docker configuration files for containerization.
+- `.gitignore`: Specifies intentionally untracked files to ignore.
+- `README.md`: This file you're currently reading.
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+    ```bash
+    git clone https://github.com/your-username/api-summary.git
+    cd api-summary
+    ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Set up the backend:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   - Navigate to the `backend/` directory.
+   - Install dependencies:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+     ```bash
+        cd backend
+        npm install
+     ```
 
-## Learn More
+   - Create a `.env` file based on the provided `.env.example` file and configure your PostgreSQL database connection.
+   - Apply Prisma migrations:
 
-To learn more about Next.js, take a look at the following resources:
+     ```bash
+        npx prisma migrate dev
+     ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   - Start the backend server:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+     ```bash
+        npm start
+     ```
 
-## Deploy on Vercel
+3. Set up the frontend:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   - Navigate to the `frontend/` directory.
+   - Install dependencies:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+     ```bash
+        cd ../frontend
+        npm install
+     ```
+
+   - Create a `.env.local` file based on the provided `.env.example` file and configure the API endpoint.
+   - Start the development server:
+
+     ```bash
+        npm run dev
+     ```
+
+4. Open your web browser and visit `http://localhost:3000` to access the API Summary application.
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests to contribute to the development of API Summary.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
