@@ -18,7 +18,7 @@ API Summary is a web application for simplified technical documentation of vario
 
 ## Folder Structure
 
-- `*/`: Contains the frontend codebase built with Next.js.
+- `*/`: Contains the codebase built with Next.js.
 - `dockerfile`: Contains Docker configuration files for containerization.
 - `.gitignore`: Specifies intentionally untracked files to ignore.
 - `README.md`: This file you're currently reading.
